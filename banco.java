@@ -3,9 +3,17 @@ public class banco {
     private int conta;
     private int agencia; 
     private float saldo; 
+    private float valor;
 
     public void sacar(){
-        //metodo para sacar o dinheiro
+        if saldo < valor{
+            System.out.println ("O seu saldo é insuficiente ")
+
+            else {
+            saldo -= valor 
+                System.out.println("O seu novo saldo sera no valor de" + saldo)
+                }
+            
     }
     public void depositar(){
         //metodo para depositar o dinheiro 
