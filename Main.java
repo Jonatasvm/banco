@@ -1,4 +1,4 @@
-public class depobanco {
+public class Main {
     public static void main (String [] args) {
         banco banco1 = new banco();
         banco1.nome = "Joao";
