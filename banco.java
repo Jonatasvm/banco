@@ -1,38 +1,37 @@
-public class banco {
+public class caixa {
+    //declarrando variaveis
     private String nome;
-    private int conta;
-    private int agencia; 
-    private float saldo; 
-    private float valor;
+    private double saldo;
+    private int agencia ;
 
-    public void sacar(){
-        if saldo < valor{
-            System.out.println ("O seu saldo é insuficiente ")
 
-            else {
-            saldo -= valor 
-                System.out.println("O seu novo saldo sera no valor de" + saldo)
-                }
-            
+    //construtor para iniciar atributos
+    public caixa(String nome, double saldoInicial, int agencia){
+        this.nome = nome;
+        this.saldo = saldoInicial;
+        this.agencia = agencia ;
     }
-    public void depositar(){
-        //metodo para depositar o dinheiro 
-    }
-    public void TrocaAgencia(){
-    }
-
-    public void alerta(){
-    if (saldo < 100)
-        System.out.println ("Gostaria de despositar ?");
-    else if (saldo > 300 )
-        System.out.println("Gostaria de sacar ?");
-    else 
-    System.out.println ("Ta precisando depositar ai pai");
+    //metodo para realizar saque
+    public void  sacar (double valor){
+        if (valor > saldo){
+            System.out.println ("Saldo insuficiente");
         }
-    
-    
+        else{
+            saldo -= valor;
+            System.out.println("Saque bem feito");
+            System.out.println("Nome:" + nome);
+            System.out.println("Agencia:" + agencia);
+            System.out.println("Novo saldo " + saldo );
+        }
+    }
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public void imprime(){
+        System.out.println("Nome:" + nome);
+        System.out.println("Agencia:" + agencia);
+        System.out.println("Saldo:" + saldo);
     }
 }
+
+
+
+
